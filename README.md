@@ -9,3 +9,6 @@ Download `kotlinc` for your OS and clone this repo for the script
 first arg - file
 second arg - how many chunks do you want
 ```kotlinc -script mp3split.kts C:\Users\mbadziong\Downloads\1.mp3 5```
+
+for win10 with WSL:
+```kotlinc -script mp3split.kts C:/Users/Matti/repos/mp3splitter/set.mp3 10```

@@ -15,7 +15,7 @@ fun splitToTracks(parsedArgs: ParsedArgs) {
     FileInputStream(parsedArgs.file).use {
         for (chunkNumber in 1..parsedArgs.expectedParts) {
             val chunk = ByteArray(splitStep.toInt())
-            val currentChunkPath = "${parsedArgs.file.parent}\\$chunkNumber-${parsedArgs.file.name}"
+            val currentChunkPath = "${parsedArgs.file.parent}/$chunkNumber-${parsedArgs.file.name}"
             val readBytes = it.read(chunk)
             with(FileOutputStream(currentChunkPath)) {
                 write(chunk, 0, readBytes)
